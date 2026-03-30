@@ -142,6 +142,71 @@ h2{font-family:var(--fd);font-size:2.4rem;font-weight:600;letter-spacing:-.02em;
 .gr-i .gv{font-family:var(--fm);font-size:.7rem;color:var(--tx-2);margin-bottom:4px}
 .gr-i .gw{font-size:.7rem;color:var(--tx-4);font-style:italic}
 
+/* INFRASTRUCTURE */
+.arch-svg{background:var(--bg-1);border:1px solid var(--bg-4);border-radius:12px;padding:28px;margin-top:32px;overflow-x:auto}
+.arch-svg svg{display:block;margin:0 auto}
+.arch-svg svg text{font-family:var(--fb);fill:var(--tx-1)}
+.arch-svg svg text.ah{font-size:13px;font-weight:600;fill:var(--tx-0)}
+.arch-svg svg text.as{font-size:11px;fill:var(--tx-3)}
+.arch-svg svg text.al{font-size:10px;fill:var(--tx-4);font-family:var(--fm)}
+.arch-svg svg rect.abox{rx:8;stroke-width:.5}
+.arch-svg svg line.aarr{stroke:var(--tx-4);stroke-width:.8}
+.arch-svg svg line.adash{stroke:var(--tx-5);stroke-width:.8;stroke-dasharray:4 3}
+.arch-svg svg .abronze{fill:rgba(205,127,50,.12);stroke:rgba(205,127,50,.3)}
+.arch-svg svg .asilver{fill:rgba(168,168,168,.1);stroke:rgba(168,168,168,.25)}
+.arch-svg svg .agold{fill:var(--au-g);stroke:rgba(201,168,124,.3)}
+.arch-svg svg .apurple{fill:rgba(130,100,200,.1);stroke:rgba(130,100,200,.25)}
+.arch-svg svg .ateal{fill:rgba(90,158,111,.08);stroke:rgba(90,158,111,.2)}
+.arch-svg svg .ared{fill:var(--rd-b);stroke:rgba(199,80,80,.25)}
+.arch-svg svg .ablue{fill:var(--bl-b);stroke:rgba(90,126,168,.25)}
+.arch-svg svg .agray{fill:var(--bg-3);stroke:var(--bg-4)}
+.arch-svg svg .apink{fill:rgba(200,120,160,.08);stroke:rgba(200,120,160,.2)}
+.arch-svg svg marker path{stroke:var(--tx-4)}
+
+.infra-tiers{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:stretch;margin-top:40px}
+.infra-tier{background:var(--bg-2);border:1px solid var(--bg-4);border-radius:10px;padding:28px 24px;transition:border-color .3s}
+.infra-tier:hover{border-color:var(--au-d)}
+.infra-tier .tier-label{font-family:var(--fm);font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px;display:block}
+.infra-tier .tier-label.bronze{color:#cd7f32}
+.infra-tier .tier-label.silver{color:#a8a8a8}
+.infra-tier .tier-label.gold{color:var(--au)}
+.infra-tier h4{font-family:var(--fd);font-size:1.3rem;font-weight:700;margin-bottom:4px}
+.infra-tier .tier-count{font-family:var(--fm);font-size:.65rem;color:var(--tx-3);margin-bottom:12px}
+.infra-tier .tier-items{list-style:none;padding:0}
+.infra-tier .tier-items li{font-size:.72rem;color:var(--tx-2);padding:4px 0;border-bottom:1px solid var(--bg-3);line-height:1.4}
+.infra-tier .tier-items li:last-child{border-bottom:none}
+.infra-tier .tier-items li span{color:var(--tx-4);font-family:var(--fm);font-size:.6rem}
+.infra-arrow{display:flex;align-items:center;justify-content:center;color:var(--au-d);font-size:1.2rem;padding:0 8px}
+.infra-sources{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:32px}
+.infra-src{background:var(--bg-2);border:1px solid var(--bg-4);border-radius:8px;padding:16px;text-align:center;transition:border-color .3s}
+.infra-src:hover{border-color:var(--au-d)}
+.infra-src .src-count{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--au);line-height:1;margin-bottom:2px}
+.infra-src .src-label{font-size:.72rem;color:var(--tx-2);margin-bottom:4px}
+.infra-src .src-detail{font-family:var(--fm);font-size:.55rem;color:var(--tx-4);line-height:1.4}
+.infra-pipeline{margin-top:32px;position:relative}
+.infra-pipeline-row{display:flex;align-items:center;gap:6px;margin-bottom:6px}
+.infra-pipeline-time{font-family:var(--fm);font-size:.58rem;color:var(--tx-4);min-width:52px;text-align:right}
+.infra-pipeline-bar{height:22px;border-radius:4px;display:flex;align-items:center;padding:0 10px;font-family:var(--fm);font-size:.55rem;color:var(--tx-0);white-space:nowrap;transition:opacity .3s}
+.infra-pipeline-bar:hover{opacity:.85}
+.infra-pipeline-bar.ingest{background:rgba(205,127,50,.25);border:1px solid rgba(205,127,50,.35);min-width:60px}
+.infra-pipeline-bar.score{background:rgba(168,168,168,.2);border:1px solid rgba(168,168,168,.3);min-width:60px}
+.infra-pipeline-bar.report{background:var(--au-g);border:1px solid rgba(201,168,124,.25);min-width:60px}
+.infra-pipeline-bar.agent{background:var(--gn-b);border:1px solid rgba(90,158,111,.2);min-width:60px}
+.infra-pipeline-bar.news{background:var(--bl-b);border:1px solid rgba(90,126,168,.2);min-width:60px}
+.infra-legend{display:flex;gap:16px;margin-top:16px;flex-wrap:wrap}
+.infra-legend span{font-family:var(--fm);font-size:.55rem;color:var(--tx-3);display:flex;align-items:center;gap:5px}
+.infra-legend span::before{content:'';width:10px;height:10px;border-radius:3px;display:block}
+.infra-legend .leg-ingest::before{background:rgba(205,127,50,.35)}
+.infra-legend .leg-score::before{background:rgba(168,168,168,.3)}
+.infra-legend .leg-report::before{background:rgba(201,168,124,.25)}
+.infra-legend .leg-agent::before{background:rgba(90,158,111,.25)}
+.infra-legend .leg-news::before{background:rgba(90,126,168,.25)}
+.infra-scale{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--bg-4);border-radius:8px;overflow:hidden;margin-top:32px}
+.infra-scale-c{background:var(--bg-2);padding:20px 12px;text-align:center}
+.infra-scale-c .isv{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--au);line-height:1;margin-bottom:2px}
+.infra-scale-c .isl{font-family:var(--fm);font-size:.48rem;text-transform:uppercase;letter-spacing:.08em;color:var(--tx-5)}
+@media(max-width:960px){.infra-tiers{grid-template-columns:1fr;gap:8px}.infra-arrow{display:none}.infra-sources{grid-template-columns:repeat(2,1fr)}.infra-scale{grid-template-columns:repeat(3,1fr)}}
+
 /* STATS */
 .ss{display:grid;grid-template-columns:repeat(8,1fr);gap:1px;background:var(--bg-4);border-radius:10px;overflow:hidden;margin-top:36px}
 .ss-c{background:var(--bg-2);padding:24px 12px;text-align:center}
@@ -182,7 +247,7 @@ h2{font-family:var(--fd);font-size:2.4rem;font-weight:600;letter-spacing:-.02em;
 </head>
 <body>
 
-<nav class="nav" id="nav"><div class="nav-i"><a href="#" class="nav-l">Alice</a><div class="nav-k"><a href="#brief">Brief</a><a href="#theme">Theme</a><a href="#portfolio">Portfolio</a><a href="#delta">Delta</a><a href="#meta">Meta</a><a href="#pushback">Pushback</a><a href="#stress">Stress Test</a><a href="#roast">Roast</a></div></div></nav>
+<nav class="nav" id="nav"><div class="nav-i"><a href="#" class="nav-l">Alice</a><div class="nav-k"><a href="#brief">Brief</a><a href="#theme">Theme</a><a href="#portfolio">Portfolio</a><a href="#delta">Delta</a><a href="#meta">Meta</a><a href="#pushback">Pushback</a><a href="#stress">Stress Test</a><a href="#roast">Roast</a><a href="#infra">Platform</a></div></div></nav>
 
 <!-- HERO -->
 <header class="hero">
@@ -1029,6 +1094,355 @@ IBIT puts expiring in 3 days             What is the plan. What is the plan.</di
     <div class="gr-i rv"><h4>📉 Don't Chase</h4><div class="gv">Bullish thesis ≠ buy now</div><div class="gw">XOM: "Don't chase." Energy theme: "Not at the open." OXY: "Wait for $60–62." Thesis and timing are different decisions.</div></div>
     <div class="gr-i rv"><h4>💥 Know Your Number</h4><div class="gv">Stress test before you're stressed</div><div class="gw">-38% NAV computed position-by-position before the scenario happens. "The worst outcome isn't the loss. The worst outcome is being surprised by the loss."</div></div>
     <div class="gr-i rv"><h4>🔥 Roast = Audit</h4><div class="gv">Comedy finds what analysis misses</div><div class="gw">The roast found the expiry concentration problem — everything dies by April 17. The serious portfolio analysis didn't flag it. The joke did.</div></div>
+  </div>
+</div>
+</section>
+
+<!-- THE PLATFORM BEHIND ALICE -->
+<section id="infra">
+<div class="ctn">
+  <div class="sr rv"></div>
+  <p class="st rv">What She's Connected To</p>
+  <h2 class="rv">The Platform Behind Alice</h2>
+  <p class="sd rv">Every number Alice cited this morning came from a three-tier warehouse rebuilt overnight by 42 automated jobs across 34 API collectors. This is what feeds the conversation.</p>
+
+  <!-- THREE TIERS -->
+  <div class="infra-tiers rv">
+    <div class="infra-tier">
+      <span class="tier-label bronze">Bronze — Raw Ingestion</span>
+      <h4>51</h4>
+      <div class="tier-count">datasets · append-only JSONL</div>
+      <ul class="tier-items">
+        <li>Polygon grouped daily <span>· 306 partitions · 11,542 tickers</span></li>
+        <li>Unusual Whales flow per strike <span>· 259 partitions</span></li>
+        <li>UW Greek exposure <span>· 260 partitions</span></li>
+        <li>UW dark pool <span>· 257 partitions</span></li>
+        <li>FRED macro series <span>· 21 partitions · 20+ series</span></li>
+        <li>GDELT geopolitical <span>· 16 partitions</span></li>
+        <li>News (RSS + Reddit + GitHub) <span>· 50+ feeds</span></li>
+        <li><span>+ 44 more datasets</span></li>
+      </ul>
+    </div>
+    <div class="infra-arrow">→</div>
+    <div class="infra-tier">
+      <span class="tier-label silver">Silver — Normalized Facts</span>
+      <h4>41</h4>
+      <div class="tier-count">datasets · deduplicated · typed · validated</div>
+      <ul class="tier-items">
+        <li>fact_underlying_bars_1d <span>· 309 partitions</span></li>
+        <li>fact_options_net_premium_daily <span>· 51 partitions</span></li>
+        <li>fact_uw_flow_per_strike <span>· 259 partitions</span></li>
+        <li>fact_vix_daily <span>· 9,126 partitions · since 1990</span></li>
+        <li>fact_news_scored <span>· LLM sentiment extraction</span></li>
+        <li>fact_bloomberg_tv_sentiment <span>· transcript → sentiment</span></li>
+        <li>22 silver builder transforms <span>· schema enforcement</span></li>
+        <li><span>+ 34 more datasets</span></li>
+      </ul>
+    </div>
+    <div class="infra-arrow">→</div>
+    <div class="infra-tier">
+      <span class="tier-label gold">Gold — ML-Ready Features</span>
+      <h4>22</h4>
+      <div class="tier-count">datasets · features · scores · regimes</div>
+      <ul class="tier-items">
+        <li>symbol_day_features <span>· ~40 features per ticker per day</span></li>
+        <li>signal_scores <span>· composite 0-100 + sub-scores</span></li>
+        <li>stm_ensemble <span>· multi-model BULL/BEAR consensus</span></li>
+        <li>market_regime_daily <span>· RISK_ON / RISK_OFF classification</span></li>
+        <li>greek_exposure_daily <span>· net GEX/DEX/VEX per ticker</span></li>
+        <li>news_sentiment_daily <span>· per-ticker sentiment scoring</span></li>
+        <li>13 gold builder transforms <span>· feature engineering</span></li>
+        <li><span>+ 15 more datasets</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- DATA SOURCE CATEGORIES -->
+  <div class="infra-sources rv">
+    <div class="infra-src">
+      <div class="src-count">34</div>
+      <div class="src-label">API Collectors</div>
+      <div class="src-detail">Polygon · Unusual Whales · FRED · SEC EDGAR · GDELT · Bloomberg · Reddit · 27 more</div>
+    </div>
+    <div class="infra-src">
+      <div class="src-count">42</div>
+      <div class="src-label">Daily Jobs</div>
+      <div class="src-detail">14 sequential pipeline steps + 28 independent cron triggers</div>
+    </div>
+    <div class="infra-src">
+      <div class="src-count">14</div>
+      <div class="src-label">Control Plane Tables</div>
+      <div class="src-detail">Run tracking · DQ results · decision traces · partition versioning</div>
+    </div>
+    <div class="infra-src">
+      <div class="src-count">1,636</div>
+      <div class="src-label">DQ Validations</div>
+      <div class="src-detail">Row count · null rate · PK uniqueness · schema · coverage · range checks</div>
+    </div>
+  </div>
+
+  <!-- DAILY TIMELINE (SIMPLIFIED) -->
+  <div style="margin-top:40px" class="rv">
+    <p style="font-family:var(--fm);font-size:.6rem;text-transform:uppercase;letter-spacing:.15em;color:var(--au-d);margin-bottom:16px">Daily Pipeline · What Runs Overnight</p>
+    <div class="infra-pipeline">
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">4:15 PM</span><div class="infra-pipeline-bar ingest" style="width:30%">Polygon + UW ingestion</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">4:25</span><div class="infra-pipeline-bar ingest" style="width:18%">VIX + regime</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">4:35</span><div class="infra-pipeline-bar ingest" style="width:40%">UW per-ticker enrichment (~400 tickers)</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">4:38</span><div class="infra-pipeline-bar score" style="width:25%">Feature scoring (gold)</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">4:45</span><div class="infra-pipeline-bar score" style="width:35%">STM scores + ensemble + momentum scan</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">5:00</span><div class="infra-pipeline-bar report" style="width:40%">Net premium report (~1,600 tickers)</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">5:15</span><div class="infra-pipeline-bar report" style="width:20%">Morning brief generator</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">5:15</span><div class="infra-pipeline-bar agent" style="width:30%">Alpha factory + portfolio tracker</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">5:30</span><div class="infra-pipeline-bar ingest" style="width:35%">FRED + treasury + commodities + FX</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">6:00</span><div class="infra-pipeline-bar agent" style="width:25%">Theme Radar scoring</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">8:00</span><div class="infra-pipeline-bar news" style="width:45%">News intelligence (4×/day) + LLM extraction</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">9:00</span><div class="infra-pipeline-bar ingest" style="width:50%">UW ticker-level V2 (max pain, OI, GEX, NOPE)</div></div>
+      <div class="infra-pipeline-row"><span class="infra-pipeline-time">9:25</span><div class="infra-pipeline-bar agent" style="width:55%">IBKR monitor + convergence + catalyst board</div></div>
+    </div>
+    <div class="infra-legend">
+      <span class="leg-ingest">Ingestion</span>
+      <span class="leg-score">Scoring</span>
+      <span class="leg-report">Reports</span>
+      <span class="leg-agent">Agents & Themes</span>
+      <span class="leg-news">News & NLP</span>
+    </div>
+  </div>
+
+  <!-- SCALE STRIP -->
+  <div class="infra-scale rv">
+    <div class="infra-scale-c"><div class="isv">114</div><div class="isl">Total Datasets</div></div>
+    <div class="infra-scale-c"><div class="isv">11.5K</div><div class="isl">Tickers (OHLCV)</div></div>
+    <div class="infra-scale-c"><div class="isv">1,529</div><div class="isl">Enriched Universe</div></div>
+    <div class="infra-scale-c"><div class="isv">427</div><div class="isl">Pipeline Runs</div></div>
+    <div class="infra-scale-c"><div class="isv">35+</div><div class="isl">Years History</div></div>
+    <div class="infra-scale-c"><div class="isv">14</div><div class="isl">SQLite Tables</div></div>
+  </div>
+</div>
+</section>
+
+<!-- ARCHITECTURE: SYSTEM MAP -->
+<section>
+<div class="ctn">
+  <div class="sr rv"></div>
+  <p class="st rv">How It's Wired</p>
+  <h2 class="rv">System Architecture</h2>
+  <p class="sd rv">Alice sits on top of a tool-calling architecture — she doesn't see raw data in her context window. She selects skill modules per query, each module hits the Warehouse API, and hard constraints fire on every response regardless of what the data says.</p>
+
+  <div class="arch-svg rv">
+    <svg width="100%" viewBox="0 0 680 530">
+      <defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+      <!-- User input -->
+      <rect class="abox agray" x="220" y="16" width="240" height="38" rx="19"/>
+      <text class="ah" x="340" y="39" text-anchor="middle">Discord / Telegram</text>
+
+      <!-- Arrow -->
+      <line class="aarr" x1="340" y1="54" x2="340" y2="78" marker-end="url(#a1)"/>
+
+      <!-- Claude API brain -->
+      <rect class="abox apurple" x="140" y="78" width="400" height="50" rx="10"/>
+      <text class="ah" x="340" y="98" text-anchor="middle">Claude API — tool-calling engine</text>
+      <text class="as" x="340" y="116" text-anchor="middle">Decomposes query → selects skill modules → synthesizes response</text>
+
+      <!-- Constraints (left) -->
+      <rect class="abox ared" x="20" y="78" width="108" height="50" rx="8"/>
+      <text class="ah" x="74" y="98" text-anchor="middle">Hard constraints</text>
+      <text class="as" x="74" y="116" text-anchor="middle">Cannot override</text>
+      <line class="aarr" x1="128" y1="103" x2="138" y2="103" marker-end="url(#a1)"/>
+
+      <!-- Memory (right) -->
+      <rect class="abox ablue" x="552" y="78" width="108" height="50" rx="8"/>
+      <text class="ah" x="606" y="98" text-anchor="middle">Memory</text>
+      <text class="as" x="606" y="116" text-anchor="middle">3 tiers · immutable</text>
+      <line class="aarr" x1="552" y1="103" x2="542" y2="103" marker-end="url(#a1)"/>
+
+      <!-- Fan-out arrows -->
+      <line class="aarr" x1="172" y1="128" x2="90"  y2="166" marker-end="url(#a1)"/>
+      <line class="aarr" x1="268" y1="128" x2="222" y2="166" marker-end="url(#a1)"/>
+      <line class="aarr" x1="340" y1="128" x2="340" y2="166" marker-end="url(#a1)"/>
+      <line class="aarr" x1="412" y1="128" x2="458" y2="166" marker-end="url(#a1)"/>
+      <line class="aarr" x1="508" y1="128" x2="590" y2="166" marker-end="url(#a1)"/>
+
+      <!-- 5 Skill Modules -->
+      <rect class="abox ateal" x="32" y="166" width="116" height="48" rx="8"/>
+      <text class="ah" x="90" y="184" text-anchor="middle">Delta Docks</text>
+      <text class="as" x="90" y="200" text-anchor="middle">Pipeline · health</text>
+
+      <rect class="abox ateal" x="160" y="166" width="116" height="48" rx="8"/>
+      <text class="ah" x="218" y="184" text-anchor="middle">Flow intel</text>
+      <text class="as" x="218" y="200" text-anchor="middle">Net premium · CP</text>
+
+      <rect class="abox ateal" x="288" y="166" width="104" height="48" rx="8"/>
+      <text class="ah" x="340" y="184" text-anchor="middle">Portfolio</text>
+      <text class="as" x="340" y="200" text-anchor="middle">IBKR · Greeks</text>
+
+      <rect class="abox ateal" x="404" y="166" width="116" height="48" rx="8"/>
+      <text class="ah" x="462" y="184" text-anchor="middle">Theme Radar</text>
+      <text class="as" x="462" y="200" text-anchor="middle">13 themes</text>
+
+      <rect class="abox ateal" x="532" y="166" width="116" height="48" rx="8"/>
+      <text class="ah" x="590" y="184" text-anchor="middle">Quant engine</text>
+      <text class="as" x="590" y="200" text-anchor="middle">Factors · scores</text>
+
+      <!-- Arrows down to warehouse -->
+      <line class="aarr" x1="90"  y1="214" x2="90"  y2="250" marker-end="url(#a1)"/>
+      <line class="aarr" x1="218" y1="214" x2="218" y2="250" marker-end="url(#a1)"/>
+      <line class="aarr" x1="340" y1="214" x2="340" y2="250" marker-end="url(#a1)"/>
+      <line class="aarr" x1="462" y1="214" x2="462" y2="250" marker-end="url(#a1)"/>
+      <line class="aarr" x1="590" y1="214" x2="590" y2="250" marker-end="url(#a1)"/>
+
+      <!-- Warehouse API -->
+      <rect class="abox agold" x="32" y="250" width="616" height="42" rx="10"/>
+      <text class="ah" x="340" y="268" text-anchor="middle">Warehouse API — FastAPI on localhost:8100</text>
+      <text class="as" x="340" y="284" text-anchor="middle">Read-only · DuckDB on Parquet · structured JSON responses</text>
+
+      <!-- Arrow down -->
+      <line class="aarr" x1="340" y1="292" x2="340" y2="320" marker-end="url(#a1)"/>
+
+      <!-- Three tiers -->
+      <rect class="abox agold" x="32" y="320" width="196" height="42" rx="8"/>
+      <text class="ah" x="130" y="336" text-anchor="middle">Gold — 22 datasets</text>
+      <text class="as" x="130" y="352" text-anchor="middle">Features · scores · regimes</text>
+
+      <rect class="abox asilver" x="242" y="320" width="196" height="42" rx="8"/>
+      <text class="ah" x="340" y="336" text-anchor="middle">Silver — 41 datasets</text>
+      <text class="as" x="340" y="352" text-anchor="middle">Normalized · validated</text>
+
+      <rect class="abox abronze" x="452" y="320" width="196" height="42" rx="8"/>
+      <text class="ah" x="550" y="336" text-anchor="middle">Bronze — 51 datasets</text>
+      <text class="as" x="550" y="352" text-anchor="middle">Raw JSONL · append-only</text>
+
+      <!-- Arrows between tiers -->
+      <line class="adash" x1="452" y1="341" x2="440" y2="341" marker-end="url(#a1)"/>
+      <line class="adash" x1="242" y1="341" x2="230" y2="341" marker-end="url(#a1)"/>
+
+      <!-- Collectors -->
+      <line class="adash" x1="550" y1="362" x2="550" y2="388" marker-end="url(#a1)"/>
+      <rect class="abox apink" x="32" y="388" width="616" height="38" rx="8"/>
+      <text class="ah" x="340" y="406" text-anchor="middle">34 API collectors</text>
+      <text class="as" x="340" y="420" text-anchor="middle">Polygon · Unusual Whales · FRED · SEC EDGAR · GDELT · Bloomberg · Reddit · 27 more</text>
+
+      <!-- SQLite control plane -->
+      <rect class="abox agray" x="32" y="446" width="616" height="32" rx="6"/>
+      <text class="al" x="340" y="466" text-anchor="middle">SQLite control plane — 14 tables · run tracking · DQ validation · decision traces · partition versioning · atomic publishing</text>
+
+      <!-- Legend -->
+      <text class="al" x="340" y="510" text-anchor="middle">Questions flow down · data flows up · constraints flow sideways · 42 daily jobs rebuild the warehouse overnight</text>
+    </svg>
+  </div>
+</div>
+</section>
+
+<!-- ARCHITECTURE: QUERY JOURNEY -->
+<section>
+<div class="ctn">
+  <div class="sr rv"></div>
+  <p class="st rv">What Happens When You Ask</p>
+  <h2 class="rv">Anatomy of a Query</h2>
+  <p class="sd rv">One question from the session above — "How's my VLO position looking?" — traced through the full stack. Alice fires 5 parallel tool calls, each hitting a different data source. The results flow back, get synthesized into a single narrative, and the answer includes a specific contract-level action plan.</p>
+
+  <div class="arch-svg rv">
+    <svg width="100%" viewBox="0 0 680 620">
+      <defs><marker id="a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+      <!-- Question -->
+      <rect class="abox agray" x="110" y="16" width="460" height="38" rx="19"/>
+      <text class="ah" x="340" y="39" text-anchor="middle">"How's my VLO position looking?"</text>
+
+      <!-- Arrow -->
+      <line class="aarr" x1="340" y1="54" x2="340" y2="78" marker-end="url(#a2)"/>
+
+      <!-- Alice brain -->
+      <rect class="abox apurple" x="110" y="78" width="460" height="50" rx="10"/>
+      <text class="ah" x="340" y="98" text-anchor="middle">Alice decomposes → 5 parallel tool calls</text>
+      <text class="as" x="340" y="116" text-anchor="middle">+ checks hard constraints + loads session memory</text>
+
+      <!-- Fan-out arrows -->
+      <line class="aarr" x1="170" y1="128" x2="82"  y2="162" marker-end="url(#a2)"/>
+      <line class="aarr" x1="255" y1="128" x2="200" y2="162" marker-end="url(#a2)"/>
+      <line class="aarr" x1="340" y1="128" x2="340" y2="162" marker-end="url(#a2)"/>
+      <line class="aarr" x1="425" y1="128" x2="480" y2="162" marker-end="url(#a2)"/>
+      <line class="aarr" x1="510" y1="128" x2="598" y2="162" marker-end="url(#a2)"/>
+
+      <!-- 5 tool calls -->
+      <rect class="abox ateal" x="28" y="162" width="108" height="52" rx="8"/>
+      <text class="ah" x="82" y="182" text-anchor="middle">Price data</text>
+      <text class="as" x="82" y="198" text-anchor="middle">RSI · SMA · ret21d</text>
+
+      <rect class="abox ateal" x="148" y="162" width="108" height="52" rx="8"/>
+      <text class="ah" x="202" y="182" text-anchor="middle">Net premium</text>
+      <text class="as" x="202" y="198" text-anchor="middle">CP ratio · efficiency</text>
+
+      <rect class="abox ateal" x="288" y="162" width="108" height="52" rx="8"/>
+      <text class="ah" x="342" y="182" text-anchor="middle">Signal scores</text>
+      <text class="as" x="342" y="198" text-anchor="middle">Composite · %ile</text>
+
+      <rect class="abox ateal" x="428" y="162" width="108" height="52" rx="8"/>
+      <text class="ah" x="482" y="182" text-anchor="middle">Flow alerts</text>
+      <text class="as" x="482" y="198" text-anchor="middle">Institutional prints</text>
+
+      <rect class="abox ateal" x="548" y="162" width="108" height="52" rx="8"/>
+      <text class="ah" x="602" y="182" text-anchor="middle">GEX / IV</text>
+      <text class="as" x="602" y="198" text-anchor="middle">Dealer delta · vol</text>
+
+      <!-- Arrows down to warehouse -->
+      <line class="aarr" x1="82"  y1="214" x2="82"  y2="248" marker-end="url(#a2)"/>
+      <line class="aarr" x1="202" y1="214" x2="202" y2="248" marker-end="url(#a2)"/>
+      <line class="aarr" x1="342" y1="214" x2="342" y2="248" marker-end="url(#a2)"/>
+      <line class="aarr" x1="482" y1="214" x2="482" y2="248" marker-end="url(#a2)"/>
+      <line class="aarr" x1="602" y1="214" x2="602" y2="248" marker-end="url(#a2)"/>
+
+      <!-- Warehouse API -->
+      <rect class="abox agold" x="28" y="248" width="624" height="40" rx="10"/>
+      <text class="ah" x="340" y="264" text-anchor="middle">Warehouse API — DuckDB on Parquet</text>
+      <text class="as" x="340" y="280" text-anchor="middle">Read-only structured queries · zero ETL at query time</text>
+
+      <!-- Arrow down -->
+      <line class="adash" x1="340" y1="288" x2="340" y2="312" marker-end="url(#a2)"/>
+
+      <!-- Gold datasets used -->
+      <rect class="abox agold" x="28" y="312" width="624" height="38" rx="8"/>
+      <text class="al" x="340" y="335" text-anchor="middle">symbol_day_features · signal_scores · flow_alerts_daily · greek_exposure_daily · fact_options_net_premium_daily · fact_uw_flow_alerts</text>
+
+      <!-- Overnight label -->
+      <text class="al" x="340" y="372" text-anchor="middle">↑ These 6 gold datasets were rebuilt overnight by the 42-job pipeline ↑</text>
+
+      <!-- IBKR separate path -->
+      <rect class="abox ablue" x="28" y="392" width="180" height="44" rx="8"/>
+      <text class="ah" x="118" y="408" text-anchor="middle">IBKR — live connection</text>
+      <text class="as" x="118" y="424" text-anchor="middle">Position · cost basis · Greeks</text>
+
+      <!-- IBKR arrow goes up to Alice directly -->
+      <path d="M28 414 L14 414 L14 103 L108 103" class="adash" fill="none" marker-end="url(#a2)"/>
+      <text class="al" x="8" y="260" text-anchor="start" transform="rotate(-90 8 260)">live, not batched</text>
+
+      <!-- Session memory path -->
+      <rect class="abox apurple" x="240" y="392" width="200" height="44" rx="8"/>
+      <text class="ah" x="340" y="408" text-anchor="middle">Session memory</text>
+      <text class="as" x="340" y="424" text-anchor="middle">"Friday's analysis" · prior VLO thesis</text>
+
+      <!-- Hard constraints path -->
+      <rect class="abox ared" x="472" y="392" width="180" height="44" rx="8"/>
+      <text class="ah" x="562" y="408" text-anchor="middle">Hard constraints</text>
+      <text class="as" x="562" y="424" text-anchor="middle">+50% → take half · 7 DTE rule</text>
+
+      <!-- Synthesis -->
+      <line class="aarr" x1="118" y1="436" x2="118" y2="468" marker-end="url(#a2)"/>
+      <line class="aarr" x1="340" y1="436" x2="340" y2="468" marker-end="url(#a2)"/>
+      <line class="aarr" x1="562" y1="436" x2="562" y2="468" marker-end="url(#a2)"/>
+
+      <rect class="abox apurple" x="54" y="468" width="572" height="42" rx="10"/>
+      <text class="ah" x="340" y="484" text-anchor="middle">Alice synthesizes 6 data sources + memory + constraints</text>
+      <text class="as" x="340" y="502" text-anchor="middle">Price action + flow + signals + alerts + GEX + IBKR position → single narrative</text>
+
+      <!-- Arrow to answer -->
+      <line class="aarr" x1="340" y1="510" x2="340" y2="540" marker-end="url(#a2)"/>
+
+      <!-- Answer -->
+      <rect class="abox agray" x="80" y="540" width="520" height="52" rx="20"/>
+      <text class="ah" x="340" y="560" text-anchor="middle">"Hold 1, sell 1. Don't be greedy, darling." 💅</text>
+      <text class="as" x="340" y="578" text-anchor="middle">Probability-weighted · contract-level · trail stop at $241</text>
+    </svg>
   </div>
 </div>
 </section>
